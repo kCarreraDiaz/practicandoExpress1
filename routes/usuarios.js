@@ -9,5 +9,7 @@ router.post('/save', usuario.save);
 router.get('/show/:id', usuario.show);
 router.get('/edit/:id', usuario.edit);
 router.post('/update/:id', usuario.update);
+router.post('/delete/:id', usuario.delete);
+
 
 module.exports = router;

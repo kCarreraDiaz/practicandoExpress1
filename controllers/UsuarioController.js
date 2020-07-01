@@ -66,7 +66,7 @@ usuarioController.update = function(req, res){
         email: req.body.email,
         estado: req.body.estado
     }}, { new: true },
-    
+
     function( err, usuario){
         if( err ){ 
             console.log('Error: ', err); 
@@ -77,6 +77,19 @@ usuarioController.update = function(req, res){
         
         res.redirect('/usuarios/show/' + usuario._id);
         
+    });
+};
+
+usuarioController.delete = function(req, res) {
+
+    Usuario.remove( { _id: req.params.id}, function(err) {
+        if (err) {
+            console.log('Error', err);
+            return;
+        }
+        console.log("usuario eliminado");
+        res.redirect('/usuarios');
+
     });
 };
 
