@@ -1,0 +1,23 @@
+<div class="container">
+    <h3><a href="/cursos">Lista de cursos</a></h3>
+    <h1>Crear nuevo curso</h1>
+
+    <form action="/cursos/save" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre </label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"/>
+        </div>
+        <div class="form-group">
+            <label for="nombre">Creditos </label>
+            <input type="text" class="form-control" id="creditos" name="creditos" placeholder="Creditos"/>
+        </div>
+        <div class="form-group">
+            <label for="nombre">Horas </label>
+            <input type="text" class="form-control" id="nrohoras" name="nrohoras" placeholder="horas"/>
+        </div>
+        
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Grabar">
+        </div>
+    </form>
+</div>

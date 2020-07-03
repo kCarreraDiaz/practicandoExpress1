@@ -1,0 +1,32 @@
+<div class="container">
+
+    <h3><a href="/cursos">Lista de Cursos</a></h3>
+    <h1>Detalle del cursos</h1>
+    
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td> {{ curso.nombre}} </td>
+                </tr>
+                <tr>
+                    <td>creditos</td>
+                    <td>{{ curso.creditos}} </td>
+                </tr>
+                <tr>
+                    <td>horas</td>
+                    <td> {{curso.nrohoras}} </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3> <a href="/cursos/edit/{{ curso._id }}" >EDIT</a></h3>
+
+        <form action="/cursos/delete/{{ curso._id }}" method="POST">
+            <button type="submit" >DELETE</button>
+        </form>
+        
+
+    </form>
+</div>
